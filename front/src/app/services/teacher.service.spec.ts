@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { expect } from '@jest/globals';
 
@@ -18,5 +18,16 @@ describe('TeacherService', () => {
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it("test de la fonction all()", ()=>{
+    service.all().subscribe((lesTeachers)=>{
+      expect(lesTeachers).toBeDefined();
+    });
+
+    service.detail("1").subscribe((unTeacher)=>{
+      expect(unTeacher).toBeDefined();
+    });
+    
   });
 });

@@ -19,4 +19,18 @@ describe('UserService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it("verifie que getById() retourne bien un User", ()=>{
+
+    service.getById("1").subscribe((unUser)=>{
+      expect(unUser).toBeDefined();
+    });
+  });
+
+   it("verifie que delete() retourne bien un observable", ()=>{
+
+    service.delete("1").subscribe((resultatObs)=>{
+      expect(resultatObs).toBeDefined();
+    });
+  });
 });
