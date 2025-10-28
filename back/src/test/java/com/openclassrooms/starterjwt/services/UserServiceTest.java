@@ -1,6 +1,7 @@
 package com.openclassrooms.starterjwt.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Optional;
@@ -37,6 +38,14 @@ class UserServiceTest {
 		
 		assertEquals(user, userAttendu);
 		
+	}
+	
+	@Test
+	public void testDelete() {
+		
+		userService.delete(1L);
+		
+		verify(userRepository).deleteById(1L);
 	}
 
 	

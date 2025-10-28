@@ -21,6 +21,7 @@ public class TeacherController {
         this.teacherService = teacherService;
     }
 
+    
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable("id") String id) {
         try {
