@@ -38,6 +38,14 @@ class UserServiceTest {
 		
 		assertEquals(user, userAttendu);
 		
+		
+		// test en cas de non trouvé:
+		when(userRepository.findById(1L)).thenReturn(Optional.empty());
+		
+		User userAttendu2 = userService.findById(1L);
+		
+		assertEquals(null, userAttendu2);
+		
 	}
 	
 	@Test

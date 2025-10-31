@@ -101,7 +101,7 @@ public class AuthControllerIntTest {
 	public void register() throws Exception{
 		
 		SignupRequest signupRequest = new SignupRequest();
-		signupRequest.setEmail("yoga@studio.com");
+		signupRequest.setEmail("test.mdp@user.com");
 		signupRequest.setFirstName("First name de test");
 		signupRequest.setLastName("Last name de test");
 		signupRequest.setPassword("test!1234");
@@ -114,7 +114,6 @@ public class AuthControllerIntTest {
 				.content(json)).
 		andExpect(status().isBadRequest());
 	    
-		
 	}
 	
 	
