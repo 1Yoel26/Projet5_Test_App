@@ -10,7 +10,7 @@ Ce projet est composé de deux parties :
 
 - **Back-end** : API REST Java Spring Boot avec base MySQL et authentification JWT  
 - **Front-end** : Application Angular permettant la consultation et la gestion des sessions de yoga  
-- **Tests** : Couverture complète du front avec Jest (unitaires) et Cypress (E2E)
+- **Tests** : Couverture du front et du back avec Jest (unitaires), Cypress (E2E) et JUnit Test (pour le back end)
 
 ---
 
@@ -199,7 +199,7 @@ UNLOCK TABLES;
 
 Dans votre terminal :
 
-- git clone https://github.com/1Yoel26/Projet5_Test_App.git
+- cd votreDossierDuProjet/ git clone https://github.com/1Yoel26/Projet5_Test_App.git
 
 Puis pour lancer le back end java:
 
@@ -210,9 +210,9 @@ Puis pour lancer le front end
 
 - cd votreCheminDuProjet/front
 
-- npm install
+- cd votreCheminDuProjet/front/npm install
 
-- ng serve
+- cd votreCheminDuProjet/front/ng serve
 
 
 ### 3 Lancement des tests
@@ -296,8 +296,6 @@ Spring Data JPA (MySQL)
 
 Spring Security + JWT
 
-Swagger / OpenAPI
-
 Lombok
 
 Maven
@@ -312,8 +310,8 @@ Cypress (tests end-to-end)
 
 Istanbul / NYC (coverage)
 
-TailwindCSS (design)
-
 Typescript
+
+
 
 Merci d’utiliser l'application de Yoga !
