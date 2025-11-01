@@ -42,7 +42,7 @@ Un script SQL est disponible pour générer la base et insérer des données de 
 
 ### 1. Créer la base de données déjà remplis 
 
-#### Exécutez le script SQL suivant dans votre interface MySQL (ex : MySQL Workbench, phpMyAdmin, terminal...) pour créer la base de données `bd1` avec ses tables et données :
+#### Exécutez le script SQL suivant dans votre interface MySQL (ex : MySQL Workbench, phpMyAdmin, terminal...) pour créer la base de données `test` avec ses tables et données :
 
 ```-- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
@@ -195,77 +195,125 @@ UNLOCK TABLES;
 - Email : yoga@studio.com  |  Mot de passe : test!1234
 
 
-### 2 Cloner le projet back end Java Spring
+### 2 Cloner le projet depuis Git Hub
 
 Dans votre terminal :
 
-- git clone https://github.com/1Yoel26/Projet2_OC_Yoel_Partie_Back_Java_Spring.git
+- git clone https://github.com/1Yoel26/Projet5_Test_App.git
 
-- cd votreChemin/Projet2_OC_Yoel_Partie_Back_Java_Spring
-./mvnw spring-boot:run
+Puis pour lancer le back end java:
+
+- cd votreCheminDuProjet/back/mvnw spring-boot:run
 
 
+Puis pour lancer le front end
 
-### 3 Cloner le projet front end Angular 
-
-Dans votre terminal :
-
-- git clone https://github.com/1Yoel26/Projet2_OC_Yoel_Partie_Front_Angular.git
-
-- cd votreChemin/Projet2_OC_Yoel_Partie_Front_Angular
+- cd votreCheminDuProjet/front
 
 - npm install
 
 - ng serve
 
 
+### 3 Lancement des tests
+
+#### Pour lancer les tests unitaires front end et obtenir le taux de coverage 
+
+- cd votreCheminDuProjet/front/npx jest --coverage
+
+
+#### Pour lancer les tests E2E Cypress front end et obtenir le taux de coverage 
+
+1) Lancer en premier le back et le front
+
+2) Puis lancer les tests et ouvrez Cypress avec cette commande dans un autre terminal (en même temps que l'app tourne):
+
+ cd votreCheminDuProjet/front/npx cypress open
+
+3) Puis génerer le rapport de test en executant cette commande dans un quatrième terminal :
+
+  cd votreCheminDuProjet/front/npm run e2e:coverage
+
+4) Puis le rapport sera disponible à :
+ 
+ cd votreCheminDuProjet/front/coverage/Icov-report/index.html
+
+
+#### Pour lancer les tests back end Java
+
+1) Exécuter cette commande:
+ 
+ cd votreCheminDuProjet/back/mvn clean test
+
+2) Puis récuperer le rapport de test à :
+ 
+ cd votreCheminDuProjet/back/target/site/jacoco/index.html
+
+
 
 
 ### 4 Accéder à l’application 
 
-- 📍 L’API sera accessible sur : http://localhost:4200
-
-- 📍 La documentation Swagger sera disponible sur : http://localhost:8080/swagger-ui/index.html
+- 📍 L’application sera accessible sur : http://localhost:4200
 
 
 
-## ⚙️ Fonctionnalités clés
+### 5 ⚙️ Fonctionnalités clés
 
-### 🔐 Authentification & sécurité
-- JWT pour protéger les routes
-- Spring Security avec gestion des rôles
-- Configuration CORS pour liaison avec Angular
+🔐 Authentification & sécurité
 
-### 🏠 Gestion des Rentals
-- Récupérer tous les rentals
-- Récupérer un rental par son id
-- Créer un nouveau rental (protégé par authentification)
-- Modifier un rental (uniquement si propriétaire)
+Connexion via JWT
+
+Rôles utilisateurs
+
+Intercepteur HTTP pour sécuriser les requêtes
+
+Gestion automatique du token côté client
+
+🧘 Gestion des sessions de yoga
+
+Création, édition, suppression et consultation de sessions
+
+Affichage dynamique des listes et détails
+
+Liaison directe avec l’API Spring Boot
+
+👤 Gestion des utilisateurs
+
+Inscription / Connexion
+
+Accès au profil
 
 
-### 👤 Gestion des utilisateurs
-- Création de compte (`/auth/register`)
-- Connexion (`/auth/login`)
-- Récupération des infos de l’utilisateur connecté (`/auth/me`)
-- Récupération d’un utilisateur par ID (`/user/{id}`)
-
-### 💬 Gestion des messages
-- Envoi d’un message lié à un rental
-
-
-### 📄 Documentation Swagger
-- Toutes les routes documentées
-- Test possible directement dans l’interface Swagger
-- Support du JWT dans Swagger pour tester les routes sécurisées
 
 ## 📚 Technologies utilisées
-- Spring Boot 3+
-- Spring Data JPA pour l’accès à la base de données
-- Spring Security + JWT pour la sécurité
-- MySQL comme base de données
-- Lombok pour réduire le code boilerplate
-- Springdoc OpenAPI pour générer la documentation Swagger
-- Maven pour la gestion des dépendances
 
+🖥️ Back-end
 
-Merci d’utiliser Rentals API !
+Spring Boot 3+
+
+Spring Data JPA (MySQL)
+
+Spring Security + JWT
+
+Swagger / OpenAPI
+
+Lombok
+
+Maven
+
+🌐 Front-end
+
+Angular 14+
+
+Jest (tests unitaires)
+
+Cypress (tests end-to-end)
+
+Istanbul / NYC (coverage)
+
+TailwindCSS (design)
+
+Typescript
+
+Merci d’utiliser l'application de Yoga !
