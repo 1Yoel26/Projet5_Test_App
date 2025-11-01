@@ -120,7 +120,7 @@
 						</goals>
 						
 							<configuration>
-				                <!-- ✅ Exclusions déplacées ici -->
+				                <!--  Exclusions  ici -->
 				                <excludes>
 				                    <exclude>**/com/openclassrooms/starterjwt/dto/**</exclude>
 				                    <exclude>**/com/openclassrooms/starterjwt/mapper/**</exclude>
