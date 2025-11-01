@@ -172,7 +172,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'ILLOUZ','Yoel',0,'test@test.fr','$2a$10$1VrUSNpb.LTyUcs06l8HDuDHnAcmHREXDLxrn9QccOmQIl6nx9s0G','2025-08-27 09:42:14','2025-08-27 11:42:14'),(3,'toto','toto',0,'toto3@toto.com','$2a$10$DrwcwIISvzzVvdABJ/qtIORWxe747ePsKvMJBwf8oDWzt4LNHpRx.','2025-08-27 17:25:09','2025-08-27 19:25:09'),(4,'Admin','Admin',1,'yoga@studio.com','$2a$10$.Hsa/ZjUVaHqi0tp9xieMeewrnZxrZ5pQRzddUXE/WjDu2ZThe6Iq','2025-09-02 12:18:04','2025-09-02 14:18:04'),(5,'test nom','test prenom',0,'testnom@test.fr','$2a$10$qr3sb5N3HRuZkbI7h3T4S.Gyx75LxNEG4e25TaabzJcuNejQuHvyu','2025-09-07 16:06:42','2025-09-07 18:06:43'),(7,'Last name de test','First name de test',1,'test.mdp@user.com','$2a$10$vTSODg/QOcZ87ZX7awoKhePEXp7wGLkzS3FUg.oPmoYQjz2C8AbFW','2025-10-28 21:56:54','2025-10-28 22:56:54'),(8,'ILLOUZ','Yoel',0,'yoga@studio.com',NULL,'2025-10-29 17:35:00','2025-10-29 18:35:00'),(9,'ILLOUZ','Yoel',0,'yoga@studio.com',NULL,'2025-10-29 17:37:50','2025-10-29 18:37:50');
+INSERT INTO `users` VALUES (2,'ILLOUZ','Yoel',0,'test@test.fr','$2a$10$1VrUSNpb.LTyUcs06l8HDuDHnAcmHREXDLxrn9QccOmQIl6nx9s0G','2025-08-27 09:42:14','2025-08-27 11:42:14'),(3,'toto','toto',0,'toto3@toto.com','$2a$10$DrwcwIISvzzVvdABJ/qtIORWxe747ePsKvMJBwf8oDWzt4LNHpRx.','2025-08-27 17:25:09','2025-08-27 19:25:09'),(4,'Admin','Admin',1,'yoga@studio.com','$2a$10$.Hsa/ZjUVaHqi0tp9xieMeewrnZxrZ5pQRzddUXE/WjDu2ZThe6Iq','2025-09-02 12:18:04','2025-09-02 14:18:04'),(5,'test nom','test prenom',0,'testnom@test.fr','$2a$10$qr3sb5N3HRuZkbI7h3T4S.Gyx75LxNEG4e25TaabzJcuNejQuHvyu','2025-09-07 16:06:42','2025-09-07 18:06:43'),(7,'Last name de test','First name de test',1,'test.mdp@user.com','$2a$10$vTSODg/QOcZ87ZX7awoKhePEXp7wGLkzS3FUg.oPmoYQjz2C8AbFW','2025-10-28 21:56:54','2025-10-28 22:56:54');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -201,9 +201,9 @@ Dans votre terminal :
 
 - cd votreDossierDuProjet/ git clone https://github.com/1Yoel26/Projet5_Test_App.git
 
-Puis pour lancer le back end java:
+Puis pour lancer le back end java (il faut que Maven soit bien installé sur votre ordinateur):
 
-- cd votreCheminDuProjet/back/mvnw spring-boot:run
+- cd votreCheminDuProjet/back/mvn spring-boot:run
 
 
 Puis pour lancer le front end
